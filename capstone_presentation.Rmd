@@ -1,0 +1,66 @@
+---
+title: "Word Prediction Application-Capstone Data Science Specialization"
+author: "Shubhanshu Mohan Srivastava"
+date: "19 September 2018"
+output: ioslides_presentation
+---
+
+## About the Capstone Project
+
+The goal of the project is to create a Shiny app that takes as input a phrase (multiple words) in a text box input and outputs  top predictions for the next word.The tidytext package has been used for text mining in this project.
+
+The data used for this project can be downloaded from [Here](http://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip)
+
+The application can be found [Here](https://shubhanshu.shinyapps.io/word_prediction/)
+
+## The prediction algorithm
+
+N-grams model is used for prediction.N-grams are consecutive sequence of words.This approach creates dataframes containing n-grams and their frequency.The top predictions are the one with the maximum frequency which alludes to maximum probability.
+
+Here is a trigram(sequence of 3 words) dataframe:
+
+```{r ,echo=F,message=F,comment=" "}
+
+corpus_token<-data.frame(word1=c("thank","looking","thank","a","going"),
+                         word2=c("for","forward","you","lot","to"),
+                         word3=c("the","to","for","of","be"),
+                         frequency=c(9978,3847,3715,3659,3553))
+head(corpus_token)
+
+```
+
+
+## How to use the application
+
+- wait for a few seconds for the datasets to be loaded
+
+- Enter the incomplete sentence.
+
+- Wait for a fraction of second for the predictions.
+
+- Enjoy the predictions.
+
+## References
+
+
+
+- Text mining in r -> [https://www.tidytextmining.com/](https://www.tidytextmining.com/)
+
+- Wikipedia -> [https://www.wikipedia.org/](https://www.wikipedia.org/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
